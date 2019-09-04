@@ -1,7 +1,21 @@
-# Spring properties
+  # Spring properties
 spring:
-  application:
-     name: search-service  # Service registers under this name
+    application:
+        name: search-service  # Service registers under this name
+    datasource:
+        url: jdbc:h2:mem:testdb
+        username: sa
+        password:
+        initialization-mode: always
+        data: classpath:/init_data.sql
+        jpa:
+            properties:
+                hibernate:
+                    dialect: org.hibernate.dialect.H2Dialect
+    h2:
+        console:
+            enabled: true
+            path: /h2-console
 
 # Map the error path to error template (for Thymeleaf)
 error.path: /error
@@ -10,15 +24,8 @@ error.path: /error
 server.port: 1235   # HTTP (Tomcat) port
 
 # Discovery Server Access
-#  1. DEV ONLY: Reduce the lease renewal interval to speed up registration
-#  2. Define URL of registration server (defaultZone)
+# Define URL of registration server (defaultZone)
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:1234/eureka/
-  instance:
-    leaseRenewalIntervalInSeconds: 5   # DO NOT DO THIS IN PRODUCTION
-
-spring.autoconfigure.exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
-
-

@@ -6,11 +6,11 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 @SpringBootApplication
 @EnableEurekaServer
-public class RegistrationServer {
+public class RegistrationService {
 
     public static void main(String[] args) {
         // Tell server to look for registration-server.yml
         System.setProperty("spring.config.name", "registration-server");
-        SpringApplication.run(RegistrationServer.class, args);
+        SpringApplication.run(RegistrationService.class, args);
     }
 }

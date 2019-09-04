@@ -6,11 +6,11 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-public class SearchServer {
+public class SearchService {
 
 	public static void main(String[] args) {
 		// Tell server to look for search-server.yml
 		System.setProperty("spring.config.name", "search-server");
-		SpringApplication.run(SearchServer.class, args);
+		SpringApplication.run(SearchService.class, args);
 	}
 }
