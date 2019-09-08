@@ -78,9 +78,4 @@ public class TestProducts {
         // then
         assertNull(product.getBrand());
     }
-
-    @SpringBootApplication
-    static class Configuration {
-    }
-
 }

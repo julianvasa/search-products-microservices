@@ -69,9 +69,4 @@ public class TestBrands {
         // then
         assertEquals(0, brand.getProducts().size());
     }
-
-    @SpringBootApplication
-    static class Configuration {
-    }
-
 }
