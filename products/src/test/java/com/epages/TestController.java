@@ -15,7 +15,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 
-import java.nio.charset.Charset;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -32,7 +31,7 @@ public class TestController {
     private MockMvc mockMvc;
 
     @Autowired
-    private ObjectMapper objectMapper;
+    private ObjectMapper mapper;
 
 
     @Test
@@ -56,7 +55,6 @@ public class TestController {
                 get("/brands")
                     .contentType(MediaType.APPLICATION_JSON)).andReturn();
             String content = res.getResponse().getContentAsString();
-            ObjectMapper mapper = new ObjectMapper();
             Brand[] brands = mapper.readValue(content, Brand[].class);
             Brand[] sortedBrands = brands.clone();
             Arrays.sort(sortedBrands);
@@ -73,7 +71,6 @@ public class TestController {
                 get("/brands")
                     .contentType(MediaType.APPLICATION_JSON)).andReturn();
             String content = res.getResponse().getContentAsString();
-            ObjectMapper mapper = new ObjectMapper();
             Brand[] brands = mapper.readValue(content, Brand[].class);
             boolean foundBrand = false;
 
@@ -98,7 +95,6 @@ public class TestController {
                 get("/brands")
                     .contentType(MediaType.APPLICATION_JSON)).andReturn();
             String content = res.getResponse().getContentAsString();
-            ObjectMapper mapper = new ObjectMapper();
             Brand[] brands = mapper.readValue(content, Brand[].class);
             boolean sortedProducts = true;
 

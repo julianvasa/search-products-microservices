@@ -12,12 +12,16 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import lombok.*;
 
+import javax.persistence.*;
 import java.io.IOException;
 
 // Constructors, Getters, Setters created by lombok
+@Entity
 @Data
 public class Product implements Cloneable, Comparable {
     // Id is an autoincrement Long
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String name;
@@ -29,7 +33,11 @@ public class Product implements Cloneable, Comparable {
     @JsonDeserialize(using=StringBooleanDeserializer.class)
     private Boolean event;
 
+    // Map many products to 1 brand
+    @ManyToOne
+    // mandatory to put jsonignore here to prevent circular exception
     @JsonIgnore
+    @JoinColumn(name = "brand_id")
     private Brand brand;
 
     @Override
@@ -68,7 +76,7 @@ public class Product implements Cloneable, Comparable {
 
         // Compare the data members and return accordingly
         return Double.compare(this.price, c.getPrice()) == 0
-            && this.id.equals(c.getId())
+            && this.id == c.getId()
             && this.name.equals(c.getName())
             && Boolean.compare(this.event, c.getEvent()) == 0;
     }

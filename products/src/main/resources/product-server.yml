@@ -1,7 +1,7 @@
   # Spring properties
 spring:
     application:
-        name: search-service  # Service registers under this name
+        name: product-service  # Service registers under this name
     datasource:
         url: jdbc:h2:mem:testdb
         username: sa
@@ -18,7 +18,8 @@ spring:
             path: /h2-console
 
 # HTTP Server
-server.port: 1235   # HTTP (Tomcat) port
+server:
+    port: 1236   # HTTP (Tomcat) port
 
 # Discovery Server Access
 # Define URL of registration server (defaultZone)
@@ -31,3 +32,4 @@ eureka:
         fetchRegistry: true
         serviceUrl:
             defaultZone: http://localhost:1234/eureka/
+

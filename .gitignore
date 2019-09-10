@@ -69,3 +69,5 @@ fabric.properties
 /.idea/
 /registration/target/
 /search/target/
+/products/target/
+/search/.idea/

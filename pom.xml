@@ -19,5 +19,6 @@
     <modules>
         <module>registration</module>
         <module>search</module>
+        <module>products</module>
     </modules>
 </project>

@@ -13,7 +13,7 @@ Steps to follow to run:
 - `mvn spring-boot run` search service, after registration service has been started
 - `open http://localhost:1235/brands` shows brands + products as shown in the example below
 - `http://localhost:1235/products` endpoint just lists all products  
-
+    
 Example:
 
 ```JSON
