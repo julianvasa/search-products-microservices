@@ -1,7 +1,7 @@
-package com.epages;
+package com.ecommerce;
 
-import com.epages.entities.Product;
-import com.epages.repository.ProductRepository;
+import com.ecommerce.entities.Product;
+import com.ecommerce.repository.ProductRepository;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

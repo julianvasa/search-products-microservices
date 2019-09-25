@@ -15,7 +15,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
-        <start-class>com.epages.SearchService</start-class>
+        <start-class>com.ecommerce.SearchService</start-class>
         <docker.image.prefix>julianvasa</docker.image.prefix>
         <docker.image.location>search</docker.image.location>
     </properties>

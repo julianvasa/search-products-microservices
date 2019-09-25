@@ -1,4 +1,4 @@
-package com.epages.entities;
+package com.ecommerce.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;

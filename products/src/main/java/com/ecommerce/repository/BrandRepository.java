@@ -1,6 +1,6 @@
-package com.epages.repository;
+package com.ecommerce.repository;
 
-import com.epages.entities.Brand;
+import com.ecommerce.entities.Brand;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

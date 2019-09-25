@@ -1,6 +1,6 @@
-package com.epages.controller;
+package com.ecommerce.controller;
 
-import com.epages.entities.Brand;
+import com.ecommerce.entities.Brand;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

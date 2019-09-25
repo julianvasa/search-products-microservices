@@ -1,9 +1,9 @@
-package com.epages.controller;
+package com.ecommerce.controller;
 
-import com.epages.entities.Brand;
-import com.epages.entities.Product;
-import com.epages.repository.BrandRepository;
-import com.epages.repository.ProductRepository;
+import com.ecommerce.repository.BrandRepository;
+import com.ecommerce.repository.ProductRepository;
+import com.ecommerce.entities.Brand;
+import com.ecommerce.entities.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

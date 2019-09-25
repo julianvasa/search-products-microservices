@@ -1,7 +1,7 @@
-package com.epages;
+package com.ecommerce;
 
-import com.epages.entities.Brand;
-import com.epages.entities.Product;
+import com.ecommerce.entities.Brand;
+import com.ecommerce.entities.Product;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.jayway.jsonpath.JsonPath;
 import net.minidev.json.JSONArray;
@@ -107,5 +107,6 @@ public class TestController {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
     }
 }

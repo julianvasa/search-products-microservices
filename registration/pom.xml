@@ -6,7 +6,7 @@
     <packaging>jar</packaging>
 
     <properties>
-        <start-class>com.epages.RegistrationService</start-class>
+        <start-class>com.ecommerce.RegistrationService</start-class>
         <docker.image.location>registration</docker.image.location>
         <docker.image.prefix>julianvasa</docker.image.prefix>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
